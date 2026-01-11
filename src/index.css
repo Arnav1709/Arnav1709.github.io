@@ -1,0 +1,127 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-body bg-midnight-950 text-gray-100 antialiased;
+    background-image: radial-gradient(
+        ellipse 80% 50% at 50% -20%,
+        rgba(99, 112, 242, 0.15),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 40% at 80% 100%,
+        rgba(167, 139, 250, 0.1),
+        transparent
+      );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent-cyan/30 text-white;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent-cyan via-accent-violet to-accent-rose bg-clip-text text-transparent;
+    background-size: 200% auto;
+  }
+
+  .glass-card {
+    @apply bg-white/[0.03] backdrop-blur-xl border border-white/[0.08] rounded-2xl;
+  }
+
+  .glass-card-hover {
+    @apply glass-card transition-all duration-300 hover:bg-white/[0.06] hover:border-white/[0.12] hover:shadow-2xl hover:shadow-accent-violet/10;
+  }
+
+  .btn-primary {
+    @apply relative px-6 py-3 font-medium text-midnight-950 bg-gradient-to-r from-accent-cyan to-accent-violet rounded-xl 
+           transition-all duration-300 hover:shadow-lg hover:shadow-accent-cyan/25 hover:scale-[1.02] active:scale-[0.98]
+           overflow-hidden;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 font-medium border border-white/20 rounded-xl transition-all duration-300
+           hover:bg-white/5 hover:border-white/30;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-display font-bold mb-4;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full 
+           bg-white/[0.06] border border-white/[0.08] text-gray-300;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent-cyan/10 border-accent-cyan/20 text-accent-cyan;
+  }
+
+  .link-underline {
+    @apply relative inline-block after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] 
+           after:bg-gradient-to-r after:from-accent-cyan after:to-accent-violet 
+           after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .grid-bg {
+    background-size: 60px 60px;
+    @apply bg-grid-pattern;
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  .animation-delay-800 {
+    animation-delay: 800ms;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-midnight-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-midnight-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-midnight-600;
+}
+
+/* Noise texture overlay */
+.noise::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.015;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  z-index: 9999;
+}
