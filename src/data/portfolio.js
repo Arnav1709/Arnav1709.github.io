@@ -63,6 +63,28 @@ export const experience = [
       "BLoC",
     ],
   },
+  {
+    company: "1000xdev",
+    role: "Software Developer Intern",
+    duration: "Dec 2025 – Jan 2026",
+    description: "Deal discovery and product data aggregation platform",
+    highlights: [
+      "Implemented BullMQ-based background task queues to run scheduled web scraping jobs, ensuring reliability and fault tolerance",
+      "Designed and built a 4-stage LLM pipeline using OpenRouter to process, normalize, and filter product data for deal discovery",
+      "Integrated third-party scraping services including ScrapingBee and ScraperAPI to extract structured data from product and search result pages",
+      "Integrated Google Search using the Serper API with query optimization to retrieve relevant product links and pricing data",
+      "Stored and managed extracted data in PostgreSQL via Supabase, supporting downstream analytics and workflows",
+    ],
+    tech: [
+      "BullMQ",
+      "OpenRouter",
+      "ScrapingBee",
+      "ScraperAPI",
+      "Serper API",
+      "PostgreSQL",
+      "Supabase",
+    ],
+  },
 ];
 
 export const projects = [
