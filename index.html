@@ -107,7 +107,7 @@
                 <ul class="diff">
                   <li>Built customer profiling and cohorting: a per-customer feature store with <b>23 typed columns</b>, recomputed on every terminal order event and synced to Mixpanel, MoEngage and GrowthBook.</li>
                   <li>Added CSV-imported static cohorts and ops-written SQL cohorts, sandboxed in a read-only transaction on the read replica.</li>
-                  <li>Built a generic POS API so restaurant POS systems without an API of their own can integrate directly: <b>9 OpenAPI endpoints</b> for menu, stock, store status and orders, with sha256-hashed API keys and pull-only order polling.</li>
+                  <li>Designed and shipped <b>Swish's own POS API</b>, so third-party restaurant POS systems can sync menus, stock, store status and orders with Swish directly.</li>
                   <li>Turned <b>179 empty searches</b> in a week into results by tuning Algolia query matching and adding synonyms.</li>
                   <li>Replaced the rain pause with a <b>10-minute rain delay</b> on delivery promises, keeping checkout open in raining zones.</li>
                   <li>Built preview launch for new restaurants and an Entity level above brands, across the Go backend and the Next.js backoffice console.</li>
@@ -129,7 +129,7 @@
                   <li>Raised availability on <b>15+ production API endpoints to 100%</b>, an average gain of 4.25% over a 30-day window, by handling invalid input and fixing duplicate-row race conditions.</li>
                   <li>Cut <b>p99 latency by 1.5 s</b> on average across three Excel-export endpoints by fixing N+1 queries and fetching only the exported columns.</li>
                   <li>Reduced CPU spikes under production load by tuning G1GC: MaxGCPauseMillis 30 to 200, ParallelGCThreads 4 to 8.</li>
-                  <li>Removed a redundant endpoint that fetched <b>190,000 rows</b> for an autocomplete that had been replaced with a plain-text input.</li>
+                  <li>Resolved a <b>production database incident</b> where every thread was occupied and services started crashing, with short-term mitigations and long-term fixes.</li>
                 </ul>
                 <ul class="chips"><li>Java</li><li>JVM tuning</li><li>SQL</li></ul>
               </div>
@@ -210,7 +210,7 @@
               <details>
                 <summary><b class="p-name">SupplySense</b><span class="p-desc">Demand forecasting for small shopkeepers, over WhatsApp</span><time>2026</time></summary>
                 <div class="p-body">
-                  <p class="context">NatWest CFP Hackathon 2026, Team Zypher.</p>
+                  <p class="context">NatWest Code for Purpose Hackathon 2026, semi-finalist with Team Zypher.</p>
                   <ul class="diff">
                     <li>Built the forecasting pipeline on Prophet, adjusted for festivals, weather and disease outbreaks.</li>
                     <li>Built OCR that turns photos of handwritten ledgers into structured data, including Hindi numerals.</li>
@@ -283,6 +283,7 @@
               <li><b>Top 5</b><span>of 45+ teams, IEEE MegaProject</span></li>
               <li><b>4th</b><span>of 300+, IEEE Coding Contest</span></li>
               <li><b>#2911</b><span>of 30,000+, Codeforces Round 944</span></li>
+              <li><b>Semi-finalist</b><span>NatWest Code for Purpose Hackathon 2026</span></li>
             </ul>
           </section>
 

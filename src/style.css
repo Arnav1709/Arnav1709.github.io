@@ -927,8 +927,8 @@ h1 {
 
 .ranks li {
   display: grid;
-  grid-template-columns: 9ch minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: 13rem minmax(0, 1fr);
+  gap: 4px 16px;
   align-items: baseline;
   padding: 14px 0;
   border-top: 1px solid var(--rule);
@@ -1067,5 +1067,9 @@ h1 {
 
   .cgpa {
     text-align: left;
+  }
+
+  .ranks li {
+    grid-template-columns: 1fr;
   }
 }
