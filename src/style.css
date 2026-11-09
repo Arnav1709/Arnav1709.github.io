@@ -342,9 +342,13 @@ ol {
   border-radius: 5px;
   background: var(--fg);
   color: var(--bg);
-  font: 700 10px/20px var(--mono);
-  text-align: center;
-  letter-spacing: -0.04em;
+  display: grid;
+  place-items: center;
+}
+
+.fav svg {
+  width: 13px;
+  height: 13px;
 }
 
 .fav.add {
