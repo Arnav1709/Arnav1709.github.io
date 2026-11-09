@@ -226,10 +226,13 @@ ol {
   place-items: center;
   border-radius: 9px;
   background: var(--hover);
-  font: 700 13px var(--mono);
-  text-decoration: none;
   color: var(--fg);
   transition: background-color 120ms;
+}
+
+.pinned svg {
+  width: 20px;
+  height: 20px;
 }
 
 .pinned a:hover {
