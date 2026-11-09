@@ -55,9 +55,6 @@ addEventListener("keydown", (e) => {
   }
 });
 
-document.getElementById("back").addEventListener("click", () => history.back());
-document.getElementById("forward").addEventListener("click", () => history.forward());
-
 // The async Clipboard API is blocked on plain-http origins and in some embedded
 // browsers, so fall back to the legacy execCommand copy there.
 async function copy(text) {

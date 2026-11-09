@@ -116,7 +116,7 @@ ol {
 
 .toolbar {
   display: grid;
-  grid-template-columns: auto auto minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 14px;
   padding: 0 14px 0 16px;
@@ -142,28 +142,6 @@ ol {
 
 .lights span:nth-child(3) {
   background: #28c840;
-}
-
-.history {
-  display: flex;
-  gap: 2px;
-}
-
-.icon-btn {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  font-size: 22px;
-  line-height: 1;
-  color: var(--muted);
-  display: grid;
-  place-items: center;
-  padding-bottom: 3px;
-}
-
-.icon-btn:hover {
-  background: var(--hover);
-  color: var(--fg);
 }
 
 .address {
@@ -996,10 +974,6 @@ h1 {
     grid-template-columns: auto minmax(0, 1fr) auto;
     padding: 10px 12px;
     gap: 10px;
-  }
-
-  .history {
-    display: none;
   }
 
   .copy {
