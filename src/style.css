@@ -22,8 +22,9 @@
   interpolate-size: allow-keywords;
 }
 
+/* Dark tokens: follow the system unless the visitor picked a theme with the toggle. */
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --desk: #0e0f11;
     --chrome: #242528;
     --sidebar: #1c1d20;
@@ -41,6 +42,30 @@
     --shadow: 0 30px 80px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
     --tab-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 0 0 1px rgb(255 255 255 / 0.06);
   }
+}
+
+:root[data-theme="dark"] {
+  --desk: #0e0f11;
+  --chrome: #242528;
+  --sidebar: #1c1d20;
+  --bg: #131416;
+  --fg: #f1f1f2;
+  --muted: #a0a4ab;
+  --rule: #34363b;
+  --field: #303236;
+  --hover: #2b2d31;
+  --add: #4cc56a;
+  --add-bg: #13261a;
+  --merge: #a884f3;
+  --merge-bg: #231a35;
+  --on-accent: #000000;
+  --shadow: 0 30px 80px rgb(0 0 0 / 0.6), 0 0 0 1px rgb(255 255 255 / 0.08);
+  --tab-shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 0 0 1px rgb(255 255 255 / 0.06);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
 }
 
 /* ---------- Base ---------- */
@@ -116,11 +141,52 @@ ol {
 
 .toolbar {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
   align-items: center;
   gap: 14px;
   padding: 0 14px 0 16px;
   border-bottom: 1px solid var(--rule);
+}
+
+.theme-toggle {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  color: var(--muted);
+  transition: background-color 120ms, color 120ms;
+}
+
+.theme-toggle:hover {
+  background: var(--hover);
+  color: var(--fg);
+}
+
+.theme-toggle svg {
+  width: 17px;
+  height: 17px;
+}
+
+/* Show the icon for the theme you would switch to. */
+.theme-toggle .moon,
+:root[data-theme="dark"] .theme-toggle .sun {
+  display: block;
+}
+
+.theme-toggle .sun,
+:root[data-theme="dark"] .theme-toggle .moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-toggle .sun {
+    display: block;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle .moon {
+    display: none;
+  }
 }
 
 .lights {
@@ -974,7 +1040,7 @@ h1 {
   }
 
   .toolbar {
-    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-columns: auto auto minmax(0, 1fr) auto;
     padding: 10px 12px;
     gap: 10px;
   }

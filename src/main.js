@@ -55,6 +55,22 @@ addEventListener("keydown", (e) => {
   }
 });
 
+// Light/dark toggle. Without a saved choice the page follows the system setting.
+const themeBtn = document.getElementById("theme-toggle");
+const systemDark = matchMedia("(prefers-color-scheme: dark)");
+const isDark = () => (document.documentElement.dataset.theme ?? (systemDark.matches ? "dark" : "light")) === "dark";
+const syncThemeLabel = () => themeBtn.setAttribute("aria-label", isDark() ? "Switch to light mode" : "Switch to dark mode");
+themeBtn.addEventListener("click", () => {
+  const next = isDark() ? "light" : "dark";
+  document.documentElement.dataset.theme = next;
+  try {
+    localStorage.setItem("theme", next);
+  } catch {}
+  syncThemeLabel();
+});
+systemDark.addEventListener("change", syncThemeLabel);
+syncThemeLabel();
+
 // The async Clipboard API is blocked on plain-http origins and in some embedded
 // browsers, so fall back to the legacy execCommand copy there.
 async function copy(text) {
