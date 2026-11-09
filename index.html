@@ -1,31 +1,326 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Arnav Kumar - Full Stack & Mobile Developer. Building beautiful, performant applications with Flutter, React, and Node.js."
-    />
-    <meta
-      name="keywords"
-      content="Arnav Kumar, Full Stack Developer, Mobile Developer, Flutter, React, Node.js, Portfolio"
-    />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arnav Kumar</title>
+    <meta name="description" content="Backend Intern at Swish. Ex-SDE Intern at Coupang, ex-Founding Engineer Intern at Flowbee AI. 77 merged open-source PRs, 4 internships." />
     <meta name="author" content="Arnav Kumar" />
-
-    <!-- Open Graph / Social Media -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Arnav Kumar | Developer Portfolio" />
-    <meta
-      property="og:description"
-      content="Full Stack & Mobile Developer building beautiful, performant applications."
-    />
-
-    <title>Arnav Kumar | Developer Portfolio</title>
+    <link rel="canonical" href="https://arnav1709.me/" />
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#d7dbe0" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e0f11" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:url" content="https://arnav1709.me/" />
+    <meta property="og:title" content="Arnav Kumar" />
+    <meta property="og:description" content="Backend Intern at Swish. Ex-SDE Intern at Coupang, ex-Founding Engineer Intern at Flowbee AI. 77 merged open-source PRs, 4 internships." />
+    <meta name="twitter:card" content="summary" />
+    <noscript><style>[role="tabpanel"][hidden] { display: block; }</style></noscript>
+    <script type="module" src="/src/main.js"></script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div class="window">
+      <!-- Browser toolbar -->
+      <header class="toolbar">
+        <div class="lights" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="history">
+          <button type="button" class="icon-btn" id="back" aria-label="Back">‹</button>
+          <button type="button" class="icon-btn" id="forward" aria-label="Forward">›</button>
+        </div>
+        <div class="address">
+          <p class="url"><span class="host">arnav1709.me</span><span class="path" id="url-path"></span></p>
+          <button type="button" class="copy" id="copy-link">Copy link</button>
+          <span class="sr-only" aria-live="polite" id="copy-status"></span>
+        </div>
+        <a class="resume-btn" href="https://drive.google.com/file/d/1wH3COs6SfIS_ArzLVvkykjFFWdM6LMmZ/view?usp=drivesdk" target="_blank" rel="noopener">Résumé</a>
+      </header>
+
+      <div class="body">
+        <!-- Page -->
+        <main class="page" id="page">
+          <!-- HOME -->
+          <section class="panel" id="home" role="tabpanel" aria-labelledby="tab-home" tabindex="0">
+            <div class="hero">
+              <div class="intro">
+                <h1>Arnav Kumar</h1>
+                <p class="lead">Currently a Backend Intern at Swish (10-minute food delivery).</p>
+                <ul class="roles">
+                  <li>Ex-SDE Intern at Coupang (Fortune 150)</li>
+                  <li>Ex-Founding Engineer Intern at Flowbee AI</li>
+                  <li>Led a project for Prabhkiran Singh, founder of Bewakoof.com, at 1000xdev</li>
+                </ul>
+                <p class="meta">B.Tech CSE, BIT Mesra, 2027</p>
+                <div class="actions">
+                  <a class="btn primary" href="mailto:arnav170905@gmail.com">Email me</a>
+                  <a class="btn" href="#work">See my work</a>
+                </div>
+              </div>
+
+              <ol class="graph" aria-label="Career timeline, newest first">
+                <li class="c head">
+                  <span class="ref">HEAD → main</span>
+                  <b>Swish</b><span>Backend Intern</span><time>Oct 2026 – now</time>
+                </li>
+                <li class="c">
+                  <b>Coupang</b><span>SDE Intern, Fortune 150</span><time>Jun – Sep 2026</time>
+                </li>
+                <li class="c merge">
+                  <b>Merged open source</b><span>77 PRs into ESP-Website</span><time>May 2026</time>
+                </li>
+                <li class="c branch">
+                  <b>ESP-Website</b><span>85 pull requests opened</span><time>Feb – May 2026</time>
+                </li>
+                <li class="c fork">
+                  <b>1000xdev</b><span>Led a project for the Bewakoof.com founder</span><time>Dec 2025 – Jan 2026</time>
+                </li>
+                <li class="c">
+                  <b>Flowbee AI</b><span>Founding Engineer Intern</span><time>May 2025 – Jan 2026</time>
+                </li>
+                <li class="c root">
+                  <b>BIT Mesra</b><span>B.Tech CSE, CGPA 8.82</span><time>2023</time>
+                </li>
+              </ol>
+            </div>
+
+            <div class="stat" aria-label="Highlights">
+              <p class="stat-row"><span class="stat-label">4 internships</span><span class="stat-num">4</span><span class="bar" aria-hidden="true">++++</span></p>
+              <p class="stat-row"><span class="stat-label">77 merged open-source PRs</span><span class="stat-num">77</span><span class="bar" aria-hidden="true">++++++++++++++++++++++++++++++</span></p>
+              <p class="stat-row"><span class="stat-label">Offers from Matiks and Deployment.inc</span><span class="stat-num">2</span><span class="bar" aria-hidden="true">++</span></p>
+              <p class="stat-row"><span class="stat-label">$100+ from open source and hackathons</span><span class="stat-num">$100+</span><span class="bar" aria-hidden="true">++++++++++</span></p>
+              <p class="stat-sum">4 internships, 77 merged PRs, 2 offers</p>
+            </div>
+          </section>
+
+          <!-- WORK -->
+          <section class="panel" id="work" role="tabpanel" aria-labelledby="tab-work" tabindex="0" hidden>
+            <h2>Work</h2>
+            <p class="sub">4 internships, newest first.</p>
+
+            <article class="job">
+              <div class="job-meta">
+                <h3>Swish</h3>
+                <p>Backend Intern</p>
+                <p class="muted">Oct 2026 – present</p>
+                <span class="tag add">current</span>
+              </div>
+              <div class="job-body">
+                <p class="context">Swish GO, a 10-minute food delivery platform.</p>
+                <ul class="diff">
+                  <li>Built customer profiling and cohorting: a per-customer feature store with <b>23 typed columns</b>, recomputed on every terminal order event and synced to Mixpanel, MoEngage and GrowthBook.</li>
+                  <li>Added CSV-imported static cohorts and ops-written SQL cohorts, sandboxed in a read-only transaction on the read replica.</li>
+                  <li>Built a generic POS API so restaurant POS systems without an API of their own can integrate directly: <b>9 OpenAPI endpoints</b> for menu, stock, store status and orders, with sha256-hashed API keys and pull-only order polling.</li>
+                  <li>Turned <b>179 empty searches</b> in a week into results by tuning Algolia query matching and adding synonyms.</li>
+                  <li>Replaced the rain pause with a <b>10-minute rain delay</b> on delivery promises, keeping checkout open in raining zones.</li>
+                  <li>Built preview launch for new restaurants and an Entity level above brands, across the Go backend and the Next.js backoffice console.</li>
+                </ul>
+                <ul class="chips"><li>Go</li><li>Next.js</li><li>Algolia</li><li>Mixpanel</li><li>MoEngage</li><li>GrowthBook</li></ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-meta">
+                <h3>Coupang</h3>
+                <p>SDE Intern</p>
+                <p class="muted">Jun – Sep 2026</p>
+                <span class="tag">Fortune 150</span>
+              </div>
+              <div class="job-body">
+                <p class="context">Transport department, First &amp; Middle Mile team.</p>
+                <ul class="diff">
+                  <li>Raised availability on <b>15+ production API endpoints to 100%</b>, an average gain of 4.25% over a 30-day window, by handling invalid input and fixing duplicate-row race conditions.</li>
+                  <li>Cut <b>p99 latency by 1.5 s</b> on average across three Excel-export endpoints by fixing N+1 queries and fetching only the exported columns.</li>
+                  <li>Reduced CPU spikes under production load by tuning G1GC: MaxGCPauseMillis 30 to 200, ParallelGCThreads 4 to 8.</li>
+                  <li>Removed a redundant endpoint that fetched <b>190,000 rows</b> for an autocomplete that had been replaced with a plain-text input.</li>
+                </ul>
+                <ul class="chips"><li>Java</li><li>JVM tuning</li><li>SQL</li></ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-meta">
+                <h3>Flowbee AI</h3>
+                <p>Founding Engineer Intern</p>
+                <p class="muted">May 2025 – Jan 2026</p>
+                <span class="tag">founding team</span>
+              </div>
+              <div class="job-body">
+                <p class="context">Content intelligence and personal branding app.</p>
+                <ul class="diff">
+                  <li>Cut app startup time by <b>70%, from 15 s to 4 s</b>, by moving network calls off the UI thread.</li>
+                  <li>Built queue-based background processing for compute-heavy workflows.</li>
+                  <li>Designed an AI theme and element classification pipeline with LangChain (Claude, OpenAI), running in a production ETL workflow.</li>
+                  <li>Moved onboarding from the client to the server with live status over Firebase, so closing the app mid-flow no longer broke it.</li>
+                  <li>Shipped over-the-air updates with Shorebird, push notifications with OneSignal, offline-first storage with Hive, and a LiveKit voice agent in the Flutter app.</li>
+                  <li>Set up Mixpanel, Sentry and AWS CloudWatch for analytics, monitoring and error tracking.</li>
+                </ul>
+                <ul class="chips"><li>Flutter</li><li>Dart</li><li>LangChain</li><li>Firebase</li><li>AWS</li></ul>
+              </div>
+            </article>
+
+            <article class="job">
+              <div class="job-meta">
+                <h3>1000xdev</h3>
+                <p>Software Engineer Intern</p>
+                <p class="muted">Dec 2025 – Jan 2026</p>
+                <span class="tag">project lead</span>
+              </div>
+              <div class="job-body">
+                <p class="context">Led a project for Prabhkiran Singh, founder of Bewakoof.com: an LLM-powered deal discovery and web data pipeline.</p>
+                <ul class="diff">
+                  <li>Built BullMQ background queues for scheduled web scraping and data ingestion.</li>
+                  <li>Designed a <b>four-stage LLM pipeline</b> on OpenRouter to normalize, filter and rank product data.</li>
+                  <li>Integrated ScrapingBee and ScraperAPI for product and search-results pages, and the Serper API for Google Search.</li>
+                  <li>Stored and managed the extracted data in PostgreSQL on Supabase.</li>
+                </ul>
+                <ul class="chips"><li>Node.js</li><li>BullMQ</li><li>OpenRouter</li><li>PostgreSQL</li><li>Supabase</li></ul>
+              </div>
+            </article>
+          </section>
+
+          <!-- PROJECTS -->
+          <section class="panel" id="projects" role="tabpanel" aria-labelledby="tab-projects" tabindex="0" hidden>
+            <h2>Projects</h2>
+            <p class="sub">Click a project to open it.</p>
+
+            <div class="projects">
+              <details>
+                <summary><b class="p-name">Extinct</b><span class="p-desc">A self-hosted personal AI agent on Telegram</span><time>2026</time></summary>
+                <div class="p-body">
+                  <ul class="diff">
+                    <li>Drives its own Chrome browser, reads and sends Gmail with approval, and runs reminders and scheduled tasks on Temporal durable workflows.</li>
+                    <li>Treats email and web text as untrusted and asks for a button tap before risky actions. Secrets use AES-256-GCM envelope encryption.</li>
+                  </ul>
+                  <ul class="chips"><li>Python</li><li>Temporal</li><li>Docker</li><li>Supabase</li><li>OpenRouter</li></ul>
+                  <p class="links"><a class="btn small" href="https://github.com/Arnav1709/extinct">GitHub</a></p>
+                </div>
+              </details>
+
+              <details>
+                <summary><b class="p-name">Cogent</b><span class="p-desc">A terminal coding agent</span><time>2026</time></summary>
+                <div class="p-body">
+                  <ul class="diff">
+                    <li>Streamed Anthropic, Gemini and Groq adapters behind one internal message and event format.</li>
+                    <li>A tool-using agent loop over 15 filesystem, shell and Git tools, with permission prompts before writes and commands.</li>
+                    <li>Append-only JSONL sessions, resumable conversations and context compaction for long runs.</li>
+                  </ul>
+                  <ul class="chips"><li>TypeScript</li><li>Node.js</li></ul>
+                  <p class="links"><a class="btn small" href="https://github.com/Arnav1709/cogent">GitHub</a></p>
+                </div>
+              </details>
+
+              <details>
+                <summary><b class="p-name">SupplySense</b><span class="p-desc">Demand forecasting for small shopkeepers, over WhatsApp</span><time>2026</time></summary>
+                <div class="p-body">
+                  <p class="context">NatWest CFP Hackathon 2026, Team Zypher.</p>
+                  <ul class="diff">
+                    <li>Built the forecasting pipeline on Prophet, adjusted for festivals, weather and disease outbreaks.</li>
+                    <li>Built OCR that turns photos of handwritten ledgers into structured data, including Hindi numerals.</li>
+                    <li>Designed a Gemini, OpenRouter, Ollama fallback chain and built the WhatsApp bot for daily briefings and reorder alerts.</li>
+                  </ul>
+                  <ul class="chips"><li>Python</li><li>FastAPI</li><li>Prophet</li><li>Gemini</li><li>Docker</li></ul>
+                  <p class="links"><a class="btn small" href="https://github.com/Arnav1709/natwest-cfp">GitHub</a></p>
+                </div>
+              </details>
+
+              <details>
+                <summary><b class="p-name">Release CLI</b><span class="p-desc">Deploys an app to AWS ECS in 3 steps instead of 30+</span><time>2025</time></summary>
+                <div class="p-body">
+                  <ul class="diff">
+                    <li>Detects Express, Django, Go and Spring Boot projects from their files and generates production Dockerfiles with Gemini, with safe fallback templates.</li>
+                    <li>Provisions ECR and ECS with idempotent AWS SDK calls, cutting containerization time by 90%.</li>
+                  </ul>
+                  <ul class="chips"><li>Node.js</li><li>AWS SDK v3</li><li>Docker</li><li>ECS</li></ul>
+                  <p class="links"><a class="btn small" href="https://www.npmjs.com/package/automatic-deploy">npm</a><a class="btn small" href="https://github.com/Arnav1709/automated-deploy">GitHub</a></p>
+                </div>
+              </details>
+
+              <details>
+                <summary><b class="p-name">Trackify</b><span class="p-desc">An attendance tracker you can ask questions</span><time>2025</time></summary>
+                <div class="p-body">
+                  <ul class="diff">
+                    <li>Firestore schemas per user and subject with history, bulk updates and cache-first reads.</li>
+                    <li>A Gemini query assistant and Play Billing subscriptions with restore flows.</li>
+                  </ul>
+                  <ul class="chips"><li>Flutter</li><li>Firebase</li><li>Gemini</li></ul>
+                  <p class="links"><a class="btn small" href="https://github.com/Arnav1709/trackify">GitHub</a></p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <!-- OPEN SOURCE -->
+          <section class="panel" id="open-source" role="tabpanel" aria-labelledby="tab-open-source" tabindex="0" hidden>
+            <h2>Open source</h2>
+            <p class="sub">Learning Unlimited, ESP-Website. Feb – May 2026.</p>
+
+            <div class="prs">
+              <p class="prs-count"><b>77</b> merged <span class="muted">of 85 pull requests</span></p>
+              <div class="waffle" id="waffle" aria-hidden="true"></div>
+              <p class="legend"><span class="key merged"></span>merged <span class="key other"></span>open or closed</p>
+            </div>
+
+            <ul class="diff">
+              <li>Migrated the development environment from <b>Vagrant to Docker Compose</b>.</li>
+              <li>Fixed N+1 query bottlenecks and wrapped multi-step workflows in transaction.atomic to prevent partial updates.</li>
+              <li>Replaced MD5 and the insecure random module with SHA-256 and secrets.</li>
+              <li>Hardened CI with dependency caching, concurrency controls, least-privilege permissions and faster lint feedback.</li>
+            </ul>
+            <p class="links"><a class="btn" href="https://github.com/learning-unlimited/ESP-Website/pulls?q=author:Arnav1709">See the pull requests</a></p>
+          </section>
+
+          <!-- EDUCATION -->
+          <section class="panel" id="education" role="tabpanel" aria-labelledby="tab-education" tabindex="0" hidden>
+            <h2>Education</h2>
+            <div class="edu">
+              <div>
+                <h3>Birla Institute of Technology, Mesra</h3>
+                <p>B.Tech, Computer Science and Engineering</p>
+                <p class="muted">2023 – 2027</p>
+              </div>
+              <p class="cgpa"><b>8.82</b><span class="muted">CGPA</span></p>
+            </div>
+            <h3 class="h-small">Competitions</h3>
+            <ul class="ranks">
+              <li><b>Top 5</b><span>of 45+ teams, IEEE MegaProject</span></li>
+              <li><b>4th</b><span>of 300+, IEEE Coding Contest</span></li>
+              <li><b>#2911</b><span>of 30,000+, Codeforces Round 944</span></li>
+            </ul>
+          </section>
+
+          <!-- CONTACT -->
+          <section class="panel" id="contact" role="tabpanel" aria-labelledby="tab-contact" tabindex="0" hidden>
+            <h2>Contact</h2>
+            <p class="status"><span class="dot" aria-hidden="true"></span>Open to full-time and internship roles.</p>
+            <p class="big-mail"><a href="mailto:arnav170905@gmail.com">arnav170905@gmail.com</a></p>
+            <div class="actions">
+              <a class="btn primary" href="https://drive.google.com/file/d/1wH3COs6SfIS_ArzLVvkykjFFWdM6LMmZ/view?usp=drivesdk" target="_blank" rel="noopener">Open résumé</a>
+              <a class="btn" href="https://github.com/Arnav1709">GitHub</a>
+              <a class="btn" href="https://www.linkedin.com/in/arnav-kumar-9691a61b4/">LinkedIn</a>
+            </div>
+          </section>
+        </main>
+
+        <!-- Vertical tabs, right side -->
+        <aside class="sidebar" aria-label="Tabs">
+          <nav class="pinned" aria-label="Links">
+            <a href="https://github.com/Arnav1709" aria-label="GitHub" title="GitHub">gh</a>
+            <a href="https://www.linkedin.com/in/arnav-kumar-9691a61b4/" aria-label="LinkedIn" title="LinkedIn">in</a>
+            <a href="mailto:arnav170905@gmail.com" aria-label="Email" title="Email">@</a>
+            <a href="https://drive.google.com/file/d/1wH3COs6SfIS_ArzLVvkykjFFWdM6LMmZ/view?usp=drivesdk" target="_blank" rel="noopener" aria-label="Résumé" title="Résumé">cv</a>
+          </nav>
+
+          <div class="tablist" role="tablist" aria-orientation="vertical" aria-label="Sections">
+            <button type="button" role="tab" id="tab-home" aria-controls="home" data-tab="home" aria-selected="true"><span class="fav">~</span><span class="t-title">Arnav Kumar</span></button>
+            <button type="button" role="tab" id="tab-work" aria-controls="work" data-tab="work" aria-selected="false" tabindex="-1"><span class="fav add">+</span><span class="t-title">Work</span><span class="t-count">4</span></button>
+            <button type="button" role="tab" id="tab-projects" aria-controls="projects" data-tab="projects" aria-selected="false" tabindex="-1"><span class="fav">{}</span><span class="t-title">Projects</span><span class="t-count">5</span></button>
+            <button type="button" role="tab" id="tab-open-source" aria-controls="open-source" data-tab="open-source" aria-selected="false" tabindex="-1"><span class="fav merge">PR</span><span class="t-title">Open source</span><span class="t-count">77</span></button>
+            <button type="button" role="tab" id="tab-education" aria-controls="education" data-tab="education" aria-selected="false" tabindex="-1"><span class="fav">B.</span><span class="t-title">Education</span></button>
+            <button type="button" role="tab" id="tab-contact" aria-controls="contact" data-tab="contact" aria-selected="false" tabindex="-1"><span class="fav">@</span><span class="t-title">Contact</span></button>
+          </div>
+
+          <p class="side-status"><span class="dot" aria-hidden="true"></span>Open to roles</p>
+          <p class="hint">Tip: ⌘1–6 switches tabs</p>
+        </aside>
+      </div>
+    </div>
   </body>
 </html>
